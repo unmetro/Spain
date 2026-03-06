@@ -21,7 +21,7 @@ services:
   users:
     image: users-micro
     container_name: users
-    network:
-      - library-soa
     ports:
       - "8087:5000"
+    network:
+      - library-soa
