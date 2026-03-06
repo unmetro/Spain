@@ -1,0 +1,169 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20260305100310
+Nombre de usuario: LAPTOP-UEKOSHF2\emlom
+Usuario RunAs: LAPTOP-UEKOSHF2\emlom
+Nombre de la configuración: 
+Máquina: LAPTOP-UEKOSHF2 (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\emlom\AppData\Local\Programs\Microsoft VS Code\0870c2a0c7\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Id. de proceso: 5484
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es .\terminal_log.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>ls
+
+
+    Directorio: C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          3/5/2026   9:59 AM           2012 books_service.py
+-a----          3/5/2026   9:59 AM           3657 loans_service.py
+-a----          3/5/2026  10:03 AM           1139 terminal_log.txt
+-a----          3/5/2026  10:00 AM           1911 users_service.py
+
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker build -t books-micro -f Dockerfile.books .
+ => [4/4] RUN pip install flask requests                                                                                                                                                          5.1s
+ => exporting to image                                                                                                                                                                            1.4s
+ => => exporting layers                                                                                                                                                                           0.7s
+ => => exporting manifest sha256:5e3281006c261f28ed5fcb571eb3e79572782b8b05ba85c7fdcb2015743c3c45                                                                                                 0.0s
+ => => exporting config sha256:6e004e44052f160fe47c0874a78f9c317c2ffe024dbec288ac16a995e353b99f                                                                                                   0.0s
+ => => exporting attestation manifest sha256:235b7151f8f98de85b706321384a82024fbc6edcadeaa7a21f91f727ce246aeb                                                                                     0.1s
+ => => exporting manifest list sha256:dd6d3d522019d2ac6445f7b42571d88b2221a71f7b0d6de2e0fb60f52d83d9ae                                                                                            0.0s
+ => => naming to docker.io/library/books-micro:latest                                                                                                                                             0.0s
+ => => unpacking to docker.io/library/books-micro:latest                                                                                                                                          0.4s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/swh8d49o1tufxsgksfg8e87y1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker build -t loans-micro -f Dockerfile.loans .
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker build -t users-micro -f Dockerfile.users .
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker images
+loans:latest                   8a0359f22df7        208MB         51.4MB    U
+monlithic-persistence:latest   a1408944c031        183MB           45MB    U
+monolithic:latest              c8171abbc23d        183MB           45MB
+notifications:latest           753b347a8946        208MB         51.4MB    U
+users-micro:latest             f99134d0e04b        208MB         51.4MB
+users:latest                   b37a353c7914        208MB         51.4MB    U
+web:latest                     c0b7855d6ba7        209MB         51.4MB    U
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker network ls
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name books --network library-soa -p 8085:5000 books-micro
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container 
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container ls
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container ls -a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name books-micro --network library-soa -p 8085:5000 books-micro
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name loans-micro --network library-soa -p 8086:5000 loans-micro
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name users-micro --network library-soa -p 8087:5000 users-micro
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>wsl
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker containers ls -a
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container ls -a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker stop 0d9a9772f48a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker stop f14c733aa44f
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker stop c2f287068a69
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container rm 52c3497d7cd0
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container rm fd540360dbe9
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container 370556d5e50d
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container rm  370556d5e50d
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker contianer ls -a
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container ls -a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker rm 0d9a9772f48a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker rm f14c733aa44f
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker rm c2f287068a69
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container ls -a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name books --network library-soa -p 8085:5000 books-micro
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name loans --network library-soa -p 8085:5000 books-micro
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container ls -a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container rm df789d3b472e
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name loans --network library-soa -p 8086:5000 laons-micro
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker container ls -a
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name loans --network library-soa -p 8086:5000 loans-micro
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>docker run -d --name users --network library-soa -p 8087:5000 users-micro
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>wsl
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cmicroservicesPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\microservices> ]633;B
+PS>Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20260305105837
+**********************
