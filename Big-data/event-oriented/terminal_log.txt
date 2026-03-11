@@ -1,0 +1,325 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20260306114402
+Nombre de usuario: LAPTOP-UEKOSHF2\emlom
+Usuario RunAs: LAPTOP-UEKOSHF2\emlom
+Nombre de la configuración: 
+Máquina: LAPTOP-UEKOSHF2 (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\emlom\AppData\Local\Programs\Microsoft VS Code\0870c2a0c7\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Id. de proceso: 18068
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es .\terminal_log.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker container ls -a
+CONTAINER ID   IMAGE                   COMMAND                  CREATED        STATUS                      PORTS     NAMES
+232f04e945f2   users-micro             "python users_servic…"   25 hours ago   Exited (137) 25 hours ago             users
+f3f329fae7bb   loans-micro             "python loans_servic…"   25 hours ago   Exited (137) 25 hours ago             loans
+0e224efaad01   books-micro             "python books_servic…"   25 hours ago   Exited (137) 25 hours ago             books
+1b29408286a8   esb                     "python esb.py"          6 days ago     Exited (137) 6 days ago               esb
+872f6bd77989   web                     "python web-service.…"   6 days ago     Exited (137) 6 days ago               web
+3af5f51c8222   notifications           "python notification…"   6 days ago     Exited (137) 6 days ago               notifications
+ac1b4f9bffb0   monlithic-persistence   "python monolithic_p…"   7 days ago     Exited (0) 7 days ago                 brave_pike
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>ls
+
+
+    Directorio: C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----          3/6/2026  11:44 AM              0 docker-compose.yml
+-a----          3/6/2026  11:46 AM           2702 terminal_log.txt
+
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up
+v View in Docker Desktop   o View Config   w Enable Watch   d Detach
+PS>ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker images 
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker build -t bigdatainf/python .
+ => => transferring context: 54B                                                                                                                                                                          0.0s
+ => [2/4] WORKDIR /app                                                                                                                                                                                    0.4s
+ => [3/4] COPY requirements.txt .                                                                                                                                                                         0.1s
+ => [4/4] RUN pip install -r requirements.txt                                                                                                                                                             3.9s
+ => exporting to image                                                                                                                                                                                    1.5s
+ => => exporting layers                                                                                                                                                                                   1.0s
+ => => exporting manifest sha256:675f4aa7a03ec8bbf9a5307757df3ed394263de907aeda3645c96404eae51bf8                                                                                                         0.0s
+ => => exporting config sha256:19a284728748ae574766d4536b6783a893e6e4d9d32ca5fd3479f7ed4fb55339                                                                                                           0.0s
+ => => exporting attestation manifest sha256:a4869a89175da28597d69285fc919600ef5821256263a43033c5ce18da180a17                                                                                             0.0s
+ => => exporting manifest list sha256:3107389729b29003c04f76cc2b41ba358662ad3c309e18fbcb7ff415c70be473                                                                                                    0.0s
+ => => naming to docker.io/bigdatainf/python:latest                                                                                                                                                       0.0s
+ => => unpacking to docker.io/bigdatainf/python:latest                                                                                                                                                    0.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/7tb3o8a9zg8izchcjmp0gcx76
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker images
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>ls
+
+
+    Directorio: C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          3/6/2026  11:54 AM                consumer
+d-----          3/6/2026  11:54 AM                publisher
+-a----          3/6/2026  11:57 AM            828 docker-compose.yml
+-a----          3/6/2026  12:00 PM            112 Dockerfile
+-a----          3/6/2026  12:00 PM             11 requirements.txt
+-a----          3/6/2026  11:52 AM           3932 terminal_log.txt
+
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+rabbitmq-1   | 2026-03-06 11:10:54.883830+00:00 [info] <0.565.0>  * rabbitmq_prometheus
+rabbitmq-1   | 2026-03-06 11:10:54.883830+00:00 [info] <0.565.0>  * rabbitmq_federation
+rabbitmq-1   | 2026-03-06 11:10:54.883830+00:00 [info] <0.565.0>  * rabbitmq_management
+rabbitmq-1   | 2026-03-06 11:10:54.883830+00:00 [info] <0.565.0>  * rabbitmq_management_agent
+rabbitmq-1   | 2026-03-06 11:10:54.883830+00:00 [info] <0.565.0>  * rabbitmq_web_dispatch
+rabbitmq-1   | 2026-03-06 11:10:54.947604+00:00 [info] <0.9.0> Time to start RabbitMQ: 15864 ms
+rabbitmq-1   | 2026-03-06 11:11:05.114178+00:00 [info] <0.748.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:05.114494+00:00 [info] <0.748.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:06.443657+00:00 [info] <0.763.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:06.444039+00:00 [info] <0.763.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:07.364474+00:00 [info] <0.770.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:07.364723+00:00 [info] <0.770.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:08.097149+00:00 [info] <0.780.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:08.097532+00:00 [info] <0.780.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:08.754740+00:00 [info] <0.790.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:08.755038+00:00 [info] <0.790.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:09.817955+00:00 [info] <0.797.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:09.818700+00:00 [info] <0.797.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:11.878357+00:00 [info] <0.809.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:11.878674+00:00 [info] <0.809.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:14.621587+00:00 [info] <0.818.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:14.621808+00:00 [info] <0.818.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:15.966520+00:00 [info] <0.830.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:15.966744+00:00 [info] <0.830.0> Successfully synced tables from a peer
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+rabbitmq-1   | 2026-03-06 11:11:06.443657+00:00 [info] <0.763.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:06.444039+00:00 [info] <0.763.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:07.364474+00:00 [info] <0.770.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:07.364723+00:00 [info] <0.770.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:08.097149+00:00 [info] <0.780.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:08.097532+00:00 [info] <0.780.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:08.754740+00:00 [info] <0.790.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:08.755038+00:00 [info] <0.790.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:09.817955+00:00 [info] <0.797.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:09.818700+00:00 [info] <0.797.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:11.878357+00:00 [info] <0.809.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:11.878674+00:00 [info] <0.809.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:14.621587+00:00 [info] <0.818.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:14.621808+00:00 [info] <0.818.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:11:15.966520+00:00 [info] <0.830.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:11:15.966744+00:00 [info] <0.830.0> Successfully synced tables from a peer
+PS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> docker compose up --build
+time="2026-03-06T12:12:50+01:00" level=warning msg="C:\\Users\\emlom\\OneDrive\\Documents\\España\\Spain\\Big-data\\event-oriented\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored
+, please remove it to avoid potential confusion"
+[+] up 1/1
+ ✔ Container event-oriented-rabbitmq-1 Running                                                                                                                                                             0.0s
+Attaching to consumer-1, publisher-1, rabbitmq-1
+consumer-1  | python: can't open file 'consume.py': [Errno 2] No such file or directory
+consumer-1 exited with code 2
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker images
+web:latest                     c0b7855d6ba7        209MB         51.4MB    U
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose down
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+rabbitmq-1  | 2026-03-06 11:24:32.034941+00:00 [warning] <0.725.0>     "deprecated_features.permit.management_metrics_collection = false"
+publisher-1  | Traceback (most recent call last):
+publisher-1  |   File "publish.py", line 8, in <module>
+publisher-1  |     connection = pika.BlockingConnection(pika.ConnectionParameters(host=rabbitmq_host,credentials=rabbitmq_credentials))
+publisher-1  |   File "/usr/local/lib/python3.8/site-packages/pika/adapters/blocking_connection.py", line 360, in __init__
+publisher-1  |     self._impl = self._create_connection(parameters, _impl_class)
+publisher-1  |   File "/usr/local/lib/python3.8/site-packages/pika/adapters/blocking_connection.py", line 451, in _create_connection
+publisher-1  |     raise self._reap_last_connection_workflow_error(error)
+publisher-1  | pika.exceptions.AMQPConnectionError
+publisher-1 exited with code 1
+rabbitmq-1   | 2026-03-06 11:24:37.463734+00:00 [info] <0.762.0> Management plugin: HTTP (non-TLS) listener started on port 15672
+rabbitmq-1   | 2026-03-06 11:24:37.463937+00:00 [info] <0.792.0> Statistics database started.
+rabbitmq-1   | 2026-03-06 11:24:37.464151+00:00 [info] <0.791.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+rabbitmq-1   | 2026-03-06 11:24:37.481997+00:00 [info] <0.810.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692
+rabbitmq-1   | 2026-03-06 11:24:37.483078+00:00 [info] <0.696.0> Ready to start client connection listeners
+rabbitmq-1   | 2026-03-06 11:24:37.486550+00:00 [info] <0.854.0> started TCP listener on [::]:5672
+rabbitmq-1   |  completed with 5 plugins.
+rabbitmq-1   | 2026-03-06 11:24:37.652871+00:00 [info] <0.696.0> Server startup complete; 5 plugins started.
+rabbitmq-1   | 2026-03-06 11:24:37.652871+00:00 [info] <0.696.0>  * rabbitmq_prometheus
+rabbitmq-1   | 2026-03-06 11:24:37.652871+00:00 [info] <0.696.0>  * rabbitmq_federation
+rabbitmq-1   | 2026-03-06 11:24:37.652871+00:00 [info] <0.696.0>  * rabbitmq_management
+rabbitmq-1   | 2026-03-06 11:24:37.652871+00:00 [info] <0.696.0>  * rabbitmq_management_agent
+rabbitmq-1   | 2026-03-06 11:24:37.652871+00:00 [info] <0.696.0>  * rabbitmq_web_dispatch
+rabbitmq-1   | 2026-03-06 11:24:37.746161+00:00 [info] <0.9.0> Time to start RabbitMQ: 13934 ms
+PS>ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+
+
+
+
+consumer-1   |  [x] Received b'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+
+
+
+
+publisher-1  |  [x] Sent 'Hello World!'
+consumer-1   |  [x] Received b'Hello World!'
+
+
+publisher-1  |  [x] Sent 'Hello World!'
+consumer-1   |  [x] Received b'Hello World!'
+
+
+publisher-1  |  [x] Sent 'Hello World!'
+consumer-1   |  [x] Received b'Hello World!'
+
+
+consumer-1   |  [x] Received b'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose down -v 
+ ✔ Network event-oriented_default       Removed                                                                                                                                                            0.5s
+PS>ErrorTerminación(): "Se ha detenido la canalización."
+>> ErrorTerminación(): "Se ha detenido la canalización."
+]633;D;1]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+]633;D]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+rabbitmq-1   | 2026-03-06 11:35:00.741697+00:00 [info] <0.920.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:35:00.741937+00:00 [info] <0.920.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:35:03.571329+00:00 [info] <0.931.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:35:03.571665+00:00 [info] <0.931.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:35:07.613486+00:00 [info] <0.938.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:35:07.613686+00:00 [info] <0.938.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:35:08.275862+00:00 [info] <0.947.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:35:08.276085+00:00 [info] <0.947.0> Successfully synced tables from a peer
+rabbitmq-1   | 2026-03-06 11:35:08.895603+00:00 [info] <0.961.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+rabbitmq-1   | 2026-03-06 11:35:08.895835+00:00 [info] <0.961.0> Successfully synced tables from a peer
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker container ls
+riented-rabbitmq-1
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose up --build
+consumer-1   |  [x] Received b'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+consumer-1   |  [x] Received b'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+consumer-1   |  [x] Received b'Hello World!'
+
+
+publisher-1  |  [x] Sent 'Hello World!'
+consumer-1   |  [x] Received b'Hello World!'
+
+consumer-1   |  [x] Received b'Hello World!'
+
+
+consumer-1   |  [x] Received b'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+
+
+consumer-1   |  [x] Received b'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+
+
+consumer-1   |  [x] Received b'Hello World!'
+publisher-1  |  [x] Sent 'Hello World!'
+
+
+publisher-1  |  [x] Sent 'Hello World!'
+consumer-1   |  [x] Received b'Hello World!'
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
+PS>docker compose down -v
+ ✔ Network event-oriented_default       Removed                                                                                                                                                            0.3s
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cemlom\x5cOneDrive\x5cDocuments\x5cEspaña\x5cSpain\x5cBig-data\x5cevent-orientedPS C:\Users\emlom\OneDrive\Documents\España\Spain\Big-data\event-oriented> ]633;B
